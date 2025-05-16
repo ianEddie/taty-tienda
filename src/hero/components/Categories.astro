@@ -1,0 +1,42 @@
+---
+const categories = [
+  {
+    id: '001',
+    name: 'Sabanas',
+    href:'/',
+    color: 'bg-[#a7c3b8]',
+    description: 'Sabanas de primera calidad y materiales premium.'
+  },
+  {
+    id: '002',
+    href:'/mochilas',
+    name: 'Mochilas',
+    color: 'bg-[#b2b2b2]',
+    description: 'Las mejores mochilas y los materos mas lindos.'
+  },
+  {
+    id: '003',
+    href:'/',
+    name: 'Riñoneras',
+    color: 'bg-[#f0eb89]',
+    description: 'Riñoneras modernas y originales.'
+  }
+];
+---
+
+<article class='w-full grid grid-flow-row flex-1 gap-2'>
+  {
+    categories.map(({ name, color, id, description, href }) => (
+      <a 
+      href={href}
+      class={`${color} p-2 flex flex-col gap-2 relative`}>
+        <span>{id}</span>
+        <h3 class='text-subtitle font-medium'>{name}</h3>
+        <p class='text-pretty max-w-[60%]'>{description}</p>
+        <svg class='absolute bottom-2 right-2 size-10 text-stone-800'>
+          <use xlink:href='/assets/sprite.svg#material-symbols-light:arrow-right-alt-rounded' />
+        </svg>
+      </a>
+    ))
+  }
+</article>

@@ -1,0 +1,20 @@
+---
+import Layout from '@layouts/Layout.astro';
+import ProductsSection from '@products/components/ProductsSection.astro';
+import { getCollection } from 'astro:content';
+
+const mochilas = await getCollection('mochilas', ({ data }) => {
+  return data;
+});
+---
+
+<Layout>
+  <main class='min-h-[100dvh] flex flex-col gap-4'>
+    <h1
+      class='text-subtitle text-center font-medium opacity-90 border-b border-neutral-800 py-2'
+    >
+      Mochilas - Materos
+    </h1>
+    <ProductsSection data={mochilas} />
+  </main>
+</Layout>

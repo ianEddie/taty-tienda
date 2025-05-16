@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'ClashGrotesk-Variable';
+  src: url('/fonts/ClashGrotesk-Variable.woff2') format('woff2');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@theme {
+  /* Fonts & Sizes */
+  --font-primary: 'ClashGrotesk-Variable', system-ui, sans-serif;
+  --text-title: 32px;
+  --text-subtitle: 20px;
+  /* Colors */
+  --color-black-medium: oklch(0.269 0 0);
+  --color-black-light: oklch(.439 0 0)
+}
+
+body {
+  font-family: 'ClashGrotesk-Variable';
+}
