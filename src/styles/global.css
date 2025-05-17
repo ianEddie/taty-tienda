@@ -8,16 +8,22 @@
   font-style: normal;
 }
 
+:root {
+  --primary-color: #f6f7f7;
+}
+
 @theme {
   /* Fonts & Sizes */
   --font-primary: 'ClashGrotesk-Variable', system-ui, sans-serif;
   --text-title: 32px;
   --text-subtitle: 20px;
   /* Colors */
-  --color-black-medium: oklch(.205 0 0);
-  --color-black-light: oklch(.371 0 0)
+  --color-primary: var(--primary-color);
+  --color-black-medium: oklch(0.205 0 0);
+  --color-black-light: oklch(0.371 0 0);
 }
 
 body {
   font-family: 'ClashGrotesk-Variable';
+  background-color: var(--primary-color);
 }
