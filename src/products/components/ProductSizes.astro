@@ -1,0 +1,14 @@
+---
+const { sizes } = Astro.props;
+---
+
+<div class='mt-[4px] leading-[18px] '>
+  {
+    sizes.map(({ label, value }: { label: string; value: number }) => (
+      <span class='flex w-full justify-between text-[14px]'>
+        <small>{label}</small>
+        <small>{value} cm</small>
+      </span>
+    ))
+  }
+</div>

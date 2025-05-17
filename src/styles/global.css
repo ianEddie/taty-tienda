@@ -14,8 +14,8 @@
   --text-title: 32px;
   --text-subtitle: 20px;
   /* Colors */
-  --color-black-medium: oklch(0.269 0 0);
-  --color-black-light: oklch(.439 0 0)
+  --color-black-medium: oklch(.205 0 0);
+  --color-black-light: oklch(.371 0 0)
 }
 
 body {

@@ -3,7 +3,12 @@ name: Matera Terra
 image: '/assets/mochilas/matero-1.webp'
 category: mochila
 material: Cuero PU
-sizes: 38cm x 23cm x 12cm
+sizes:
+  [
+    { label: 'Alto', value: 38 },
+    { label: 'Ancho', value: 23 },
+    { label: 'Largo', value: 12 }
+  ]
 price: 60000
-description: Capacidad para un termo de hasta 1.9 L, mate y yerba.
+description: Termo hasta 1.9L, mate y yerba.
 ---

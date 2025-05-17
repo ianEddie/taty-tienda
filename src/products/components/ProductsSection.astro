@@ -1,41 +1,30 @@
 ---
+import ProductImage from './ProductImage.astro';
+import ProductPrice from './ProductPrice.astro';
+import ProductSizes from './ProductSizes.astro';
 const { data } = Astro.props;
 ---
 
 <section class='grid grid-cols-2 grow gap-2 px-2'>
   {
     data.map(({ data }: { data: any }) => {
-      const { name, image, material, sizes, price, description } = data;
+      const { name, image, sizes, price, description } = data;
       return (
-        <article class='flex flex-col h-fit border border-black-medium'>
-          <picture class='h-[250px] flex justify-center items-center'>
-            <img
-              src={image}
-              alt={`Image of a ${name}`}
-              class='object-cover'
-            />
-          </picture>
+        <article class='flex flex-col h-fit border border-black-medium bg-neutral-50'>
+          <ProductImage image={image} />
           <div class='flex flex-col p-2  border-t border-black-medium'>
-            <h2 class='font-medium opacity-90 '>{name}</h2>
-            <p class='text-[12px] text-black-light text-pretty'>{description}</p>
-            <div>
-              <span class='w-full flex justify-between mt-1'>
-                <small>Alto</small>
-                <small>32 cm</small>
-              </span>
-              <span class='w-full flex justify-between'>
-                <small>Ancho</small>
-                <small>32 cm</small>
-              </span>
-              <span class='w-full flex justify-between'>
-                <small>Largo</small>
-                <small>32 cm</small>
-              </span>
+            <div class='flex flex-col leading-[18px]'>
+              <h2 class='font-medium opacity-90 '>{name}</h2>
+              <ProductPrice price={price} />
             </div>
+            <p class='text-[12px] text-black-light text-pretty leading-[14px] mt-1'>
+              {description}
+            </p>
+            <ProductSizes sizes={sizes} />
             <a
               href='https://wa.me/5491137569650?text=Hola%20quiero%20hacer%20una%20consulta'
-              target="_blank"
-              class='mt-1 w-full bg-black-medium text-white px-2 py-px text-sm text-center'
+              target='_blank'
+              class='mt-1 w-full bg-black-medium text-white px-2 py-[2px] text-sm text-center'
             >
               Lo quiero
             </a>
