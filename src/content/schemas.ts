@@ -14,3 +14,4 @@ export const productSchema = z.object({
   price: z.number(),
   description: z.string()
 });
+

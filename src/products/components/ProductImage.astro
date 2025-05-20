@@ -2,10 +2,10 @@
 const { image } = Astro.props;
 ---
 
-<picture class='flex justify-center items-center py-3'>
+<picture class='flex justify-center items-center p-2'>
   <img
     src={image}
     alt={`Image of a product`}
-    class='h-[160px] w-auto object-cover drop-shadow-lg'
+    class='h-[160px] w-auto object-contain drop-shadow-lg'
   />
 </picture>

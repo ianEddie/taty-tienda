@@ -1,7 +1,7 @@
 ---
 name: Matera Terra
 image: '/assets/mochilas/matero-1.webp'
-category: mochila
+category: mochilas
 material: Cuero PU
 sizes:
   [

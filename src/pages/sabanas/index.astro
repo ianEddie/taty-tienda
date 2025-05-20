@@ -3,7 +3,7 @@ import Layout from '@layouts/Layout.astro';
 import ProductsSection from '@products/components/ProductsSection.astro';
 import { getCollection } from 'astro:content';
 
-const mochilas = await getCollection('mochilas', ({ data }) => {
+const sabanas = await getCollection('sabanas', ({ data }) => {
   return data;
 });
 ---
@@ -13,13 +13,13 @@ const mochilas = await getCollection('mochilas', ({ data }) => {
     <header
       class='flex justify-between p-2 items-center font-medium opacity-90 border-b-2 border-neutral-800'
     >
-      <h1 class='text-subtitle'>Mochilas - Materos</h1>
+      <h1 class='text-subtitle'>Sabanas</h1>
       <a
         href='/'
         class='text-sm border-b border-black-medium'
         >Volver</a
       >
     </header>
-    <ProductsSection data={mochilas} />
+    <ProductsSection data={sabanas} />
   </main>
 </Layout>

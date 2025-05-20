@@ -1,7 +1,7 @@
 ---
 name: Matera Goma
 image: '/assets/mochilas/matero-2.webp'
-category: mochila
+category: mochilas
 material: Goma Negra
 sizes:
   [

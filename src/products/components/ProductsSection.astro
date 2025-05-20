@@ -1,4 +1,5 @@
 ---
+import ProductButton from './ProductButton.astro';
 import ProductImage from './ProductImage.astro';
 import ProductPrice from './ProductPrice.astro';
 import ProductSizes from './ProductSizes.astro';
@@ -8,7 +9,7 @@ const { data } = Astro.props;
 <section class='grid grid-cols-2 grow gap-2 px-2'>
   {
     data.map(({ data }: { data: any }) => {
-      const { name, image, sizes, price, description } = data;
+      const { name, image, sizes, price, description, category } = data;
       return (
         <article class='flex flex-col h-fit border-2 border-black-medium bg-white'>
           <ProductImage image={image} />
@@ -21,13 +22,7 @@ const { data } = Astro.props;
               {description}
             </p>
             <ProductSizes sizes={sizes} />
-            <a
-              href='https://wa.me/5491137569650?text=Hola%20quiero%20hacer%20una%20consulta'
-              target='_blank'
-              class='mt-1 w-full bg-black-medium text-white px-2 py-[2px] text-sm text-center'
-            >
-              Lo quiero
-            </a>
+            <ProductButton />
           </div>
         </article>
       );

@@ -6,6 +6,12 @@ const mochilas = defineCollection({
   schema: productSchema
 });
 
+const sabanas = defineCollection({
+  type: 'content',
+  schema: productSchema
+});
+
 export const collections = {
-  mochilas: mochilas
+  mochilas: mochilas,
+  sabanas: sabanas
 };
