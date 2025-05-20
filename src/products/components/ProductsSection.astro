@@ -13,7 +13,7 @@ const { data } = Astro.props;
     data.map(({ data }: { data: any }) => {
       const { name, image, sizes, price, description } = data;
       return (
-        <article class='h-fit flex flex-col border-2 border-black-medium bg-stone-100'>
+        <article class='h-fit flex flex-col border-2 border-black-medium bg-stone-50'>
           <ProductImage image={image} />
           <div class='flex flex-col p-2 border-t-2 border-black-medium'>
             <div class='flex flex-col leading-[18px]'>
