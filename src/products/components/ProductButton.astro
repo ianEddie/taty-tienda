@@ -1,7 +1,12 @@
- <a
-              href='https://wa.me/5491137569650?text=Hola%20quiero%20hacer%20una%20consulta'
-              target='_blank'
-              class='mt-1 w-full bg-black-medium text-white px-2 py-[2px] text-sm text-center'
-            >
-              Lo quiero
-            </a>
+---
+const { name } = Astro.props;
+const link = `https://wa.me/5491137569650?text=Hola%20quiero%20hacer%20una%20consulta%20sobre%20la%20${name}`;
+---
+
+<a
+  href={link}
+  target='_blank'
+  class='mt-1 w-full bg-black-medium text-white px-2 py-[2px] text-sm text-center'
+>
+  Lo quiero
+</a>
