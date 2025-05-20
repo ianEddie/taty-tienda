@@ -3,22 +3,25 @@ const categories = [
   {
     id: '001',
     name: 'Sabanas',
-    href:'/sabanas',
-    color: 'bg-[#a7c3b8]',
+    href: '/sabanas',
+    color:
+      'bg-gradient-to-br from-[#a7c3b8]/60 to-[#a7c3b8]/20 via-yellow-100/30',
     description: 'Sabanas de primera calidad y materiales premium.'
   },
   {
     id: '002',
-    href:'/mochilas',
+    href: '/mochilas',
     name: 'Mochilas',
-    color: 'bg-[#b2b2b2]',
+    color:
+      'bg-gradient-to-br from-[#b2b2b2]/70 to-[#b2b2b2]/20 via-amber-100/30',
     description: 'Las mejores mochilas y los materos mas lindos.'
   },
   {
     id: '003',
-    href:'/',
+    href: '/',
     name: 'Riñoneras',
-    color: 'bg-[#f0eb89]',
+    color:
+      'bg-gradient-to-br from-[#f0eb89]/70 to-[#f0eb89]/20 via-green-100/60',
     description: 'Riñoneras modernas y originales.'
   }
 ];
@@ -27,9 +30,10 @@ const categories = [
 <article class='w-full grid grid-flow-row flex-1 gap-2'>
   {
     categories.map(({ name, color, id, description, href }) => (
-      <a 
-      href={href}
-      class={`${color} p-2 flex flex-col gap-2 relative`}>
+      <a
+        href={href}
+        class={`${color} p-2 flex flex-col gap-2 relative border-b border-black-medium`}
+      >
         <span>{id}</span>
         <h3 class='text-subtitle font-medium'>{name}</h3>
         <p class='text-pretty max-w-[60%]'>{description}</p>
@@ -40,3 +44,4 @@ const categories = [
     ))
   }
 </article>
+
