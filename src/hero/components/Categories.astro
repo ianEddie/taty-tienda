@@ -5,7 +5,7 @@ const categories = [
     name: 'Sabanas',
     href: '/sabanas',
     color:
-      'bg-gradient-to-br from-[#a7c3b8]/60 to-[#a7c3b8]/20 via-yellow-100/30',
+      'bg-gradient-to-br from-[#a7c3b8]/40 to-[#a7c3b8]/20 via-yellow-100/20',
     description: 'Sabanas de primera calidad y materiales premium.'
   },
   {
@@ -13,7 +13,7 @@ const categories = [
     href: '/mochilas',
     name: 'Mochilas',
     color:
-      'bg-gradient-to-br from-[#b2b2b2]/70 to-[#b2b2b2]/20 via-amber-100/30',
+      'bg-gradient-to-br from-[#b2b2b2]/40 to-[#b2b2b2]/20 via-amber-100/20',
     description: 'Las mejores mochilas y los materos mas lindos.'
   },
   {
@@ -21,13 +21,13 @@ const categories = [
     href: '/',
     name: 'Riñoneras',
     color:
-      'bg-gradient-to-br from-[#f0eb89]/70 to-[#f0eb89]/20 via-green-100/60',
+      'bg-gradient-to-br from-[#f0eb89]/40 to-[#f0eb89]/20 via-green-100/20',
     description: 'Riñoneras modernas y originales.'
   }
 ];
 ---
 
-<article class='w-full grid grid-flow-row flex-1 gap-2'>
+<article class='w-full grid grid-row-3 flex-1 gap-2'>
   {
     categories.map(({ name, color, id, description, href }) => (
       <a
@@ -44,4 +44,3 @@ const categories = [
     ))
   }
 </article>
-
