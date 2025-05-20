@@ -6,12 +6,12 @@ import ProductSizes from './ProductSizes.astro';
 const { data } = Astro.props;
 ---
 
-<section class='grid grid-cols-2 grow gap-2 px-2'>
+<section class='grid grid-cols-[repeat(auto-fill,minmax(150px,1fr))] grow gap-2 px-2 pb-4 '>
   {
     data.map(({ data }: { data: any }) => {
       const { name, image, sizes, price, description, category } = data;
       return (
-        <article class='flex flex-col h-fit border-2 border-black-medium bg-white'>
+        <article class='flex flex-col border-2 border-black-medium bg-white'>
           <ProductImage image={image} />
           <div class='flex flex-col p-2 border-t-2 border-black-medium'>
             <div class='flex flex-col leading-[18px]'>
@@ -22,7 +22,7 @@ const { data } = Astro.props;
               {description}
             </p>
             <ProductSizes sizes={sizes} />
-            <ProductButton name={name}/>
+            <ProductButton name={name} />
           </div>
         </article>
       );
