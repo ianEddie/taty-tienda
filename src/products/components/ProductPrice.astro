@@ -3,7 +3,7 @@ const { price } = Astro.props;
 const formatedPrice = price.toLocaleString('es-AR');
 ---
 
-<span class=''>
-  <small class='font-medium opacity-95'>{formatedPrice}</small>
+<span class='text-[18px] px-px font-medium'>
+  <small>{formatedPrice}</small>
   <small class='text-green-700'>$</small>
 </span>

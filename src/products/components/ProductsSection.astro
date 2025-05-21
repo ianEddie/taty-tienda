@@ -13,14 +13,12 @@ const { data } = Astro.props;
     data.map(({ data }: { data: any }) => {
       const { name, image, sizes, price, description } = data;
       return (
-        <article class='h-fit flex flex-col border-2 border-black-medium bg-stone-50'>
+        <article class='h-fit flex flex-col border-2 border-black-medium'>
           <ProductImage image={image} />
-          <div class='flex flex-col p-2 border-t-2 border-black-medium'>
-            <div class='flex flex-col leading-[18px]'>
-              <h2 class='font-medium opacity-90 '>{name}</h2>
-              <ProductPrice price={price} />
-            </div>
-            <p class='text-[12px] text-black-light text-pretty leading-[14px] mt-1'>
+          <div class='flex flex-col gap-1 leading-5 p-2 border-t-2 border-black-medium bg-orange-200/30'>
+            <h2 class='font-semibold opacity-80 tracking-wide px-px'>{name}</h2>
+            <ProductPrice price={price} />
+            <p class='text-[12px] opacity-80 text-pretty leading-[14px] px-px'>
               {description}
             </p>
             <ProductSizes sizes={sizes} />

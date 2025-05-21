@@ -9,7 +9,9 @@
 }
 
 :root {
-  --primary-color: oklch(0.97 0.001 106.424);
+  --primary-color: #eee8e1;
+  --product-color: hsla(33, 26%, 86%, 30%);
+  --category-color: #e8e2d8;
 }
 
 @theme {
@@ -21,6 +23,8 @@
   --color-primary: var(--primary-color);
   --color-black-medium: oklch(0.205 0 0);
   --color-black-light: oklch(0.371 0 0);
+  --color-product: var(--product-color);
+  --color-category: var(--category-color);
 }
 
 body {
